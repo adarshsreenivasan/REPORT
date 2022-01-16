@@ -1,44 +1,944 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage{graphicx}
-\usepackage{multirow}
-\usepackage{color}
 \usepackage{amsmath}
-\usepackage[toc,page]{appendix}
-\usepackage{geometry}
- 	\geometry
- 		{
- 			a4paper,
- 			%total={170mm,257mm},
- 			left=25mm,
- 			top=25mm,
- 			right=20mm,
- 			bottom=20mm,
- 		}
 \usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{framed}
+\usepackage{a4wide}
+\usepackage{float}
+\graphicspath{ {./frontpages/} }
+%The below Section make chapter and its name to center of the page
+%Change made to see change in network
+\usepackage{blindtext}
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@makeschapterhead}{%
+  \Huge \bfseries  #1\par\nobreak%
+}{%
+  \Huge \bfseries\centering #1\par\nobreak%
+}{\typeout{Patched makeschapterhead}}{\typeout{patching of @makeschapterhead failed}}
+
+
+\xpatchcmd{\@makechapterhead}{%
+  \huge\bfseries \@chapapp\space \thechapter
+}{%
+  \huge\bfseries\centering \@chapapp\space \thechapter
+}{\typeout{Patched @makechapterhead}}{\typeout{Patching of @makechapterhead failed}}
+
+\makeatother
+%The above Section make chapter and its name to center of the page
+%\unwanted packages also included
+
+\linespread{1.5}
+%\pagestyle{fancy}
+%\fancyhead{}
+%\header and footer section
+%\renewcommand\headrulewidth{0.1pt}
+%\fancyhead[L]{\footnotesize \leftmark}
+%\fancyhead[R]{\footnotesize \thepage}
+%\renewcommand\headrulewidth{0pt}
+%\fancyfoot[R]{\small College of Engineering, Kidangoor}
+%\renewcommand\footrulewidth{0.1pt}
+%\fancyfoot[C]{2019 - 2020}
+%\fancyfoot[L]{\small Name of the project}
+
+
 
 
 \begin{document}
-	\renewcommand{\baselinestretch}{1.5}
-	\input{frontpages/titlepage}
-	\input{frontpages/certificatepage}
-	\pagenumbering{roman}
-	\input{frontpages/acknowledgementpage}
-	\input{frontpages/abstractpage}
-	\tableofcontents
-	\listoffigures
-	\addcontentsline{toc}{chapter}{List of figures}
-	\listoftables
-	\addcontentsline{toc}{chapter}{List of tables}
-	\pagestyle{fancy}
-	\renewcommand{\headrulewidth}{0pt}
-	\fancyhf{}
-	\rhead{\textit{Seminar Title}}
-	\cfoot{\thepage}
-	\lfoot{\textit{Dept. of ECE}}
-	\rfoot{\textit{College of Engineering Kidangoor}}
-	\input{chapters/introduction}
-	\input{chapters/materialsandmethods}
-	\input{chapters/environments}
-	\input{chapters/references}
-	\input{chapters/appendices}
-	\end{document}
+\begin{center}
+{\Large \textbf{SEMINARTOPIC}}\\
+\vspace{2cm}
+A SEMINAR REPORT\\
+\vspace{0.5cm}
+Submitted by \\
+\vspace{1cm}
+\textbf{ADARSH S}\\
+\vspace{0.2cm}
+\textbf{KGR18EC001}\\
+\vspace{0.2cm} to\\
+
+
+ the A P J Abdul Kalam Technological University \\
+in partial fulfillment of the requirements for the award 
+of the Degree \\
+of\\
+Bachelor of Technology \\
+in\\
+Electronics and Communication Engineering
+\end{center}
+
+
+\begin{center}
+
+\vspace{1.2cm}
+
+\includegraphics[scale=0.3]{ceklogo.jpg}
+
+DEPARTMENT OF ELECTRONICS \& COMMUNICATION ENGINEERING\\
+
+COLLEGE OF ENGINEERING KIDANGOOR\\
+
+JANUARY 2022\\
+\end{center}
+
+\thispagestyle{empty}
+\newpage
+%\Declaration in this page.
+\begin{center}
+\textbf{DECLARATION}\\
+\end{center}
+I hereby declare that the seminar report \textbf{“SEMINARTOPIC”} , 
+submitted for partial fulfillment of the requirements for the award of degree of 
+Bachelor of Technology in Electronics and Communication Engineering of the APJ 
+Abdul Kalam Technological University, Kerala is a bonafide work done by me
+under supervision of Mr. Joby James, Assistant Professor of Electronics and Communication Engineering Department. 
+This submission represents my ideas in
+ my own words and where ideas or words of others have been included, I 
+ have adequately and accurately cited and referenced the original sources. 
+ I also declare that I have adhered to ethics of academic honesty and 
+ integrity and have not misrepresented or fabricated any data or idea 
+ or fact or source in my submission. I understand that any violation 
+ of the above will be a cause for disciplinary action by the Institute 
+ and/or the University and can also evoke penal action from the sources 
+ which have thus not been properly cited or from whom proper permission 
+ has not been obtained. This report has not been previously formed the 
+ basis for the award of any degree, diploma or similar title of any other 
+ University.
+
+\noindent \begin{minipage}{0.45\linewidth}
+\begin{flushleft}
+\vspace{1 cm}
+                         
+Kidangoor \\
+17/01/2022\\
+
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{flushright}                                      
+\vspace{1cm}
+                         
+ADARSH S\\
+
+
+\end{flushright} 
+\end{minipage}
+
+\thispagestyle{empty}
+
+\newpage
+\begin{center}
+
+%\vspace{1.5cm}
+
+\textbf{Department of Electronics and Communication Engineering}
+
+\textbf{COLLEGE OF ENGINEERING KIDANGOOR}
+
+
+\textbf{2018-2022}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{ceklogo.jpg}
+
+\end{center}
+\vspace{0.2cm}
+\begin{center}
+ \textbf{CERTIFICATE}
+\end{center}
+% him/her => 
+This is to certify that the report entitled \textbf{ \large SEMINARTOPIC} 
+submitted by \textbf{ADARSH S}, to the APJ Abdul Kalam Technological University in 
+partial fulfillment of the Bachelor of Technology degree in Electronics 
+and Communication Engineering is a bonafide record of the seminar work 
+carried out by him under our guidance and supervision.
+\vspace{3cm}
+
+\noindent \begin{minipage}{0.45\linewidth}
+\begin{flushleft}
+\vspace{3cm}
+                         
+\textbf{Seminar Coordinator} \\
+\vspace{0.8cm}
+Joby James \\
+\footnotesize{Assistant Professor\\
+Electronics and Communication\\
+College of Engineering Kidangoor}\\
+
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+\begin{flushleft}                                      
+\vspace{3cm}
+                         
+\textbf{Head of the Department} \\
+\vspace{.8cm}
+Syama R\\
+\footnotesize{Assistant Professor\\
+Electronics and Communication\\
+College of Engineering Kidangoor}\\
+
+
+\end{flushleft} 
+\end{minipage}
+\thispagestyle{empty}
+
+\newpage
+\chapter*{\centering \large ACKNOWLEDGEMENT\markboth{Acknowledgements}{Acknowledgements}}
+
+This is the most satisfying, yet most difficult part of the 
+seminar to present gratifying
+words because most often they fail to convey the real 
+influence, others have had on one’s
+work.First and foremost I thank The Almighty for his 
+abundant blessings without which
+this seminar would not have been success. I am extremely 
+grateful to Dr. K G Viswanadhan, Principal, College of 
+Engineering Kidangoor, for providing with best facilities. 
+I would
+like to extend my sincere gratitude to Ms. Syama R,
+Assistant Professor and Head of the
+Department of Electronics and Communication Engineering for 
+extending every facility to
+complete my seminar work successfully.I would like to 
+express my sincere indebtedness to
+Asst. Professor Joby James of Department of Electronics 
+and Communication Engineering, for his valuable guidance,
+wholehearted co-operation and duly approving the topic as
+staff in charge. I also thank all my teachers and friends 
+for their sincere guidance and cooperation. Above all I 
+thank my parents who have been the pillars of support 
+and constant encouragement throughout the course of this seminar
+
+
+
+\begin{flushright}
+\textbf{ADARSH S}
+\end{flushright}
+\thispagestyle{empty}
+
+
+% Please remove and edit percentage(%) Symbol, if you want this 
+% Acknowledgement page in your report. As per ktu guideline, 
+% this page is not necessary. 
+\begin{abstract}
+
+%\pagenumbering{roman}
+As we all know, an integrated circuit or chip is one of the 
+biggest innovations of the 20th 
+century it launched many of the technological innovations 
+and revolutions created in silicon valley.
+at big tech conferences, chip manufacturers will announce  
+they've hit impossibly small new mile stone, like 22nm 
+then 14 nm and 10 nm designs. 
+that means they've found a way to shrink the size and 
+increase the number
+of features on a chip, which ultimately improves the 
+overall processing power. 
+this is what's been driving the semiconductor industry, 
+which is also called Moore's law.
+Unfortunately, Moore's Law is starting to fail: 
+transistors have become so small 
+that simple physics began to block the process
+Moore's law has been predicted to be dying for a long 
+time and yet it never is.
+because each
+generation engineers knows it's their expectation to 
+keep working on it, going at a certain pace.
+EUVL is such an NGL that keeps Moore's law alive
+
+
+SEMINARTOPIC (also known as EUV or EUVL) 
+is  a lithography (mainly chip printing/making aka "fabricating") 
+technology using  a range of extreme ultraviolet (EUV) wavelengths, 
+roughly spanning a 2\% FWHM bandwidth about 13.5 nm. While EUV 
+technology is available for  mass production, only 53 machines 
+worldwide capable of  producing wafers using the technique 
+were delivered during 2018 and 2019,  while 201 immersion 
+lithography systems were delivered during the same  period. 
+SEMINARTOPIC (EUVL) technology and 
+infrastructure  development has made excellent progress 
+over the past several years, and  tool suppliers are 
+delivering alpha tools to customers. Potential successors 
+to optical projection lithography are being aggressively 
+developed. These are known as "Next-Generation Lithographies" 
+(NGL's). EUV lithography (EUVL) 
+is one of the leading NGL technologies; others include x-ray 
+lithography, ion beam projection lithography, and electron-beam 
+projection lithography. Using extreme-ultraviolet (EUV) light 
+to carve transistors in silicon wafers will lead to 
+microprocessors that are up to 100 times faster than 
+today's most powerful chips, and to memory chips 
+with similar increases in storage capacity.  
+Significant efforts are also needed to achieve the 
+resolution, line width  roughness, and photo speed 
+requirements for EUV photoresists. Cost of  ownership 
+and extendibility to future nodes are key factors in 
+determining the  outlook for the manufacturing insertion 
+of EUVL. Since wafer throughput is a  critical cost 
+factor, source power, resist sensitivity, and system 
+design all need  to be carefully considered. However, 
+if the technical and business challenges  can be met, 
+then EUVL will be the likely technology of choice for 
+semiconductor  manufacturing at the 32, 22, 16 and 11 
+nm half-pitch nodes
+\end{abstract}
+\pagenumbering{roman}
+\tableofcontents %This command used for index.
+\listoffigures
+
+
+
+
+    
+
+\chapter{INTRODUCTION}
+\pagenumbering{arabic}
+After three decades of development, a new generation of 
+lithography machines has now been shipped to large 
+computer chip makers. It uses extreme ultraviolet (EUV) 
+light at a wavelength of 13.5 nm to make silicon 
+features down to a few nanometers in size on the 
+memory chips and processors of tomorrow.with more than 
+100,000 components, such an EUV 
+lithography system is one of the most complex 
+machines ever built. It is pumped by the most 
+powerful laser system ever made in serial production. 
+In total, it weighs 180 tons and consumes more than 
+1 MW electrical power. It costs \$120 million
+
+Extreme ultraviolet (sometimes also called XUV) denotes 
+soft x-rays with wavelengths between 124 and 10 nm or
+ photon energies between 10 eV and 124 eV. 
+ The sun produces EUV; humans create it through 
+ synchrotrons, or from plasma.
+Up until now, chip makers have used ultraviolet light to 
+project complex patterns onto
+ silicon wafers coated with photoresist. In a process 
+ analogous to the development of the old paper photos, 
+ these patterns are developed and become conducting or 
+ isolating structures within one layer. This process is 
+ repeated until the complex systems forming an 
+ integrated circuit such as a microprocessor are 
+ complete.The development of such lithographic systems is 
+driven by economy: Ever more computing power 
+and storage capacity is needed while costs and 
+power consumption must be lowered. 
+This development can be described in a simple rule, 
+well-known as Moore’s law
+
+\section{Moore's Law}
+Moore's law is an observation and projection of a 
+historical trend. Rather than a law 
+of physics, Moore's law is an expectation it's 
+not like a natural law or something. An expectation 
+that we innovate at a pace of roughly doubling 
+the density of transistors on a IC every two years.
+All these allow us to 
+offer better products, allow us to offer cheaper 
+products with the same capability and that in 
+turn drives the demand for the overall industry. 
+that means that we've got to be able to cram in, 
+more and more
+functionality per square millimeter on a chip. all 
+the design and everything have to be smaller in dimensions.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{Moore's_Law_Transistor_Count.png}
+  \caption{Moore's Law Transistor Count}
+  \label{moores}
+  \end{figure}
+
+\section{Photolithography}
+Photolithography, also called optical lithography or UV lithography, 
+is a process used in 
+microfabrication to pattern parts on a thin film or the bulk of 
+a substrate (also called a wafer). 
+It uses light to transfer a geometric pattern from a photomask 
+(also called an optical mask) to 
+a photosensitive (that is, light-sensitive) chemical photoresist 
+on the substrate. A series of 
+chemical treatments then either etches the exposure pattern into 
+the material or enables deposition 
+of a new material in the desired pattern upon the material 
+underneath the photoresist
+
+This method can create extremely small patterns, down to a few 
+tens of nanometers in size. 
+It provides precise control of the shape and size of the objects 
+it creates and can create 
+patterns over an entire surface cost-effectively. It's main 
+disadvantages are that it requires 
+a flat substrate to start with, it is not very effective at 
+creating shapes that are not flat, 
+and it can require extremely clean operating conditions. 
+Photolithography is commonly used to produce computer chips. 
+When producing computer chips, 
+the substrate material is a resist covered wafer of silicon. 
+This process allows hundreds of 
+chips to be simultaneously built on a single silicon wafer.
+
+
+
+
+
+\section{Basic Concept}
+Major limitation in the lithography process comes from 
+the laws of optics. 
+German physicist Ernst Abbe found that the resolution 
+of a microscope d is 
+(roughly) limited to the 
+wavelength $\lambda$ of the light used in illumination:
+
+$$d =\lambda/(nsin(\alpha))$$
+
+
+where n is the refractive index of the medium between the 
+lens and the object and 
+$\lambda$ is the half-angle of the objective's cone of 
+light. For lithography, substituting
+numerical aperture (NA) for $$nsin(\alpha)$$ and adding 
+a factor k to the formula 
+(because lithographic resolution can be strongly tweaked 
+with illumination tricks),
+the minimum feasible structure, or critical dimension 
+(CD), is:
+
+$$CD = {k}{\lambda}/NA$$
+
+
+This formula, which governs all lithographic imaging processes, makes 
+obvious why the wavelength is such a crucial parameter. As a result, 
+engineers have been looking for light sources with ever-shorter 
+wavelengths to produce ever-smaller features. Beginning with UV
+ mercury-vapor lamps, they moved to excimer lasers with a wavelength of 193 nm. 
+
+
+
+\chapter{EUVL}
+\section{Introduction to EUVL}
+
+Optical projection lithography is the technology used to
+print the intricate patterns that define integrated circuits
+onto semiconductor wafers. Typically, a pattern on a
+mask is imaged, with a reduction of 4:1, by a highly
+accurate camera onto a silicon wafer coated with
+photoresist. Continued improvements in optical
+projection lithography have enabled the printing of ever
+finer features, the smallest feature size decreasing by
+about 30\% every two years. This, in turn, has allowed
+the integrated circuit industry to produce ever more
+powerful and cost-effective semiconductor devices. On
+average, the number of transistors in a state-of-the-art
+integrated circuit has doubled every 18 months.
+Currently, the most advanced lithographic tools used in
+high-volume manufacture employ deep-ultraviolet (DUV)
+radiation with a wavelength of 248 nm to print features
+that have line widths as small as 200 nm. It is believed
+that new DUV tools, presently in advanced development,
+that employ radiation that has a wavelength of 193 nm,
+will enable optical lithography to print features as small
+as 100 nm, but only with very great difficulty for highvolume manufacture. Over the next several years it will
+be necessary for the semiconductor industry to identify a
+new lithographic technology that will carry it into the
+future, eventually enabling the printing of lines as small
+as 30 nm. Potential successors to optical projection
+lithography are being aggressively developed. These are
+known as “Next-Generation Lithographies” (NGL's).
+EUV lithography (EUVL) is one of the leading NGL
+technologies; others include X-Ray lithography, ionbeam projection lithography, and electron-beam
+projection lithography.
+In many respects, EUVL may be viewed as a natural
+extension of optical projection lithography since it uses
+short wavelength radiation (light) to carry out projection
+imaging. In spite of this similarity, there are major
+differences between the two technologies. Most of these
+differences occur because the properties of materials in
+the EUV portion of the electromagnetic spectrum are
+very different from those in the visible and UV
+wavelength ranges. The purpose of this paper is to
+explain what EUVL is and why it is of interest, to
+describe the current status of its development, and to
+provide the reader with an understanding of the
+challenges that must be overcome if EUVL is to fulfill its
+promise in high-volume manufacture.
+
+EUVL technology is an advanced technology with a 
+light source of 13.5 nm, which is extremely short 
+wavelength and can be applied for beyond the 10 
+nm node. EUVL enables the use of only one mask 
+exposure instead of multiexposure. However, there 
+are still three issues to be solved before this 
+technique can be applied in mass production: a 
+light power source, resists, and mask infrastructure. 
+Among these issues, to make such a lithography tool, 
+economical production capacity and producing a 
+stable light source are the most difficult issues 
+to be solved. For a wafer-per-hour (WPH) up to 125 
+in the 12-inch production line, a light source 
+power of 200 W is needed and EUVL has to satisfy 
+this requirement.
+The development of resist material is one of 
+the critical technical issues of EUVL. This 
+material is necessary to have the excellent 
+characteristics: high resolution, high sensitivity 
+as well as low line-edge roughness (LER) and low 
+outgassing simultaneously.
+When EUVL continues to move toward mass 
+production manufacturing, the availability 
+of a defect-free reflective photomask is also 
+one of the critical challenges which needs to 
+be considered. EUV's photomasks work in 
+reflective mode. To produce these masks would 
+introduce new materials and surfaces, which 
+might cause high particle adhesion on the surface 
+of masks, creating a cleaning issue. 
+Therefore, a special pellicle is designed to 
+protect the mask from particles adhesion when 
+the EUV scanner is in use. However, an EUV mask 
+with a pellicle has still some remaining issues 
+to be solved. These issues are also addressed: 
+the stress of the protective film module may 
+cause an overlay shift; it may also prevent 
+the film from light absorbing, and the mask 
+inspection can be limited to photochemical light, 
+which reduces the valuable EUV power.
+In addition to EUV technology, very extremely 
+short wavelength techniques such as using the 
+X-ray lithography (XRL) with 1 nm wavelength 
+ and deep X-ray lithography (DXRL) with 0.1 nm 
+ wavelength are under development and they 
+ belong to next-generation lithography (NGL), 
+ which may provide a solution for technology 
+ node beyond 5 nm in future.
+
+\section{Why EUV ?}
+
+In order to keep pace with the demand for the printing of
+ever smaller features, lithography tool manufacturers
+have found it necessary to gradually reduce the
+wavelength of the light used for imaging and to design
+imaging systems with ever larger numerical apertures.
+The reasons for these changes can be understood from
+the following equations that describe two of the most
+fundamental characteristics of an imaging system:
+resolution (RES) and depth of focus (DOF). These
+equations are usually expressed as
+
+$$RES = {k_1}{\lambda}/NA$$
+$$DOF = {k_2}{\lambda}/(NA)^2 $$
+
+where l is the wavelength of the radiation used to carry
+out the imaging, and NA is the numerical aperture of the
+imaging system (or camera). These equations show that
+better resolution can be achieved by reducing l and
+increasing NA. The penalty for doing this, however, is
+that the DOF is decreased. Until recently, the DOF used
+in manufacturing exceeded 0.5 mm, which provided for
+sufficient process control.
+The case $k_1$ = $k_2$ = $\frac{1}{2}$ corresponds to the usual definition
+of diffraction-limited imaging. In practice, however, the
+acceptable values for $k_1$ and $k_2$ are determined
+experimentally and are those values which yield the
+desired control of critical dimensions (CD’s) within a
+tolerable process window. Camera performance has a
+major impact on determining these values; other factors
+that have nothing to do with the camera also play a role.
+Such factors include the contrast of the resist being used
+and the characteristics of any etching processes used.
+Historically, values for $k_1$ and $k_2$ greater than 0.6 have
+been used comfortably in high-volume manufacture.
+Recently, however, it has been necessary to extend
+imaging technologies to ever better resolution by using
+smaller values for $k_1$ and $k_2$ and by accepting the need for
+tighter process control. This scenario is schematically
+diagrammed in Figure~\ref{euv1}, where the values for $k_1$ and
+DOF associated with lithography using light at 248 nm
+and 193 nm to print past, present, and future CD’s
+ranging from 350 nm to 100 nm are shown. The
+“Comfort Zone for Manufacture” corresponds to the
+region for which $k_1$ $>$ 0.6 and DOF $>$ 0.5 mm. Also
+shown are the $k_1$ and DOF values currently associated
+with the EUVL printing of 100 nm features, which will
+be explained later. As shown in the figure, in the very
+near future it will be necessary to utilize $k_1$ values that
+are considerably less than 0.5. Problems associated with
+small $k_1$ values include a large iso/dense bias (different
+conditions needed for the proper printing of isolated and
+dense features), poor CD control, nonlinear printing
+(different conditions needed for the proper printing of
+large and small features), and magnification of mask CD
+errors. Figure~\ref{euv1} also shows that the DOF values
+associated with future lithography will be uncomfortably
+small. Of course, resolution enhancement techniques
+such as phase-shift masks, modified illumination
+schemes, and optical proximity correction can be used to
+enhance resolution while increasing the effective DOF.
+However, these techniques are not generally applicable to
+all feature geometries and are difficult to implement in
+manufacturing. The degree to which these techniques
+can be employed in manufacturing will determine how
+far optical lithography can be extended before an NGL is
+needed.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=1]{whyeuvl.png}
+  \caption{
+    \centering The $k_1$ and DOF values associated with 248
+  nm and 193 nm lithographies for the printing of CD
+  values ranging from 350 nm down to 100nm assuming
+  that $k_2 = k_1$ and NA = 0.6}
+  \label{euv1}
+  \end{figure}
+
+EUVL alleviates the foregoing problems by drastically
+decreasing the wavelength used to carry out imaging.
+Consider Figure~\ref{euv2}. The dashed black line shows the
+locus of points corresponding to a resolution of 100 nm;
+the region to the right of the line corresponds to even
+better resolution.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=1]{whyeuvl2.png}
+  \caption{
+    \centering The region between the lines shows the
+    wavelength and numerical aperture of cameras
+    simultaneously having a resolution of 100 nm or better
+    and a DOF of 0.5 mm or better
+    }
+  \label{euv2}
+  \end{figure}
+
+  The solid red line shows the locus of points for which the
+DOF is 0.5 mm; in the region to the left of that line the
+DOF values are larger. Points in the region between the
+two lines correspond to situations in which the resolution
+is 100 nm or better, and the DOF is 0.5 mm or longer. As
+shown, to be in this favorable region, the wavelength of
+the light used for imaging must be less than 40 nm, and
+the NA of the imaging system must be less than 0.2. The
+solid circle shows the parameters used in current imaging
+experiments. Light having wavelengths in the spectral
+region from 40 nm to 1 nm is variously referred to as
+extreme uv, vacuum uv, or soft x-ray radiation.
+Projection lithography carried out with light in this
+region has come to be known as EUV lithography
+(EUVL). Early in the development of EUVL, the
+technology was called soft x-ray projection lithography
+(SXPL), but that name was dropped in order to avoid
+confusion with x-ray lithographyy, which is a 1:1, 
+near contact printing technology
+
+
+As explained above, EUVL is capable of printing features
+of 100 nm and smaller while achieving a DOF of 0.5 mm
+and larger. Currently, most EUVL work is carried out in
+a wavelength region around 13 nm using cameras that
+have an NA of about 0.1, which places the technology
+well within the “Comfort Zone for Manufacture” as
+shown in Figure 1 by the data point farthest to the right.
+
+% Lithography with 193 nanometer light has been 
+% pushed further than many would 
+% have thought possible, but it has come at a cost: 
+% the industry has had to reach 
+% deep into a bag of tricks to continue shrinking 
+% chip features. Chipmakers will be 
+% able to continue making smaller, faster and 
+% more powerful chips while keeping 
+% costs in check.
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.5]{Substrate.jpg}
+% \caption{Elements of Biological cells and components of a typical IoT device.}{Ref- [2]}
+% \label{sub}
+% \end{figure}
+
+\section{Working}
+
+EUVL is a significant departure from the deep 
+ultraviolet lithography standard. 
+Attached to the EUV scanner, the source consists 
+of a droplet generator, collector and a vacuum chamber. 
+In EUV, the process takes place in a vacuum 
+environment, because nearly everything absorbs 
+EUV light.(All optical elements, including the photomask,
+ must use defect-free molybdenum/silicon (Mo/Si) 
+ multilayers (consisting of 40 Mo/Si bilayers) that 
+act to reflect light by means of interlayer 
+interference; any one of these mirrors absorb
+ around 30\% 
+of the incident light). The source of the light is a tiny little droplet of tin.
+they're smaller than 
+the diameter of a human hair in which it fire 
+across the vessel and then it is intercepted those 
+with a pulsed laser 
+beam of very high power and have to hit with 
+an accuracy of just a few microns
+The droplets are 25 microns in diameter and 
+are falling at a rate of 50,000 times a second
+In the vessel, there is a camera. A droplet 
+passes a certain position in the chamber. 
+Then, the camera tells the seed laser in the 
+sub-fab to fire a laser pulse into the main 
+vacuum chamber. This is called the pre-pulse
+The pre-pulse laser hits the spherical tin droplet 
+and turns it into a pancake-like shape. Then the laser 
+unit fires again, representing the main pulse. 
+The main pulse hits the pancake-like tin droplet
+ and vaporizes it.
+
+
+At that point, the tin vapor becomes plasma. 
+The plasma, in turn, emits EUV light at 13.5nm 
+wavelengths. The goal is to hit a droplet with precision
+This determines how much of the laser power 
+gets turned into EUV light, 
+which is referred to as conversion efficiency
+There's a collector mirror that collects that light
+and sends it into the scanner. then there are 
+four mirrors that essentially shape that light 
+into a slit that bounces off the reticle.
+The light bounces off the collector and travels 
+through an intermediate focus unit into the scanner
+and what's happening next is step and scan. which 
+basically means it continues to reproduce that 
+particular pattern over and over again
+EUV light is propelled into the scanner. In the 
+scanner, the light bounces off a complex scheme 
+of 10 surfaces or multi-layer mirrors. First, 
+the light goes through a programmable illuminator. 
+This forms a pupil shape to illuminate the right 
+amount of light for the EUV mask.
+Then, EUV light hits the mask, which is also 
+reflective. It bounces off six multi-layer 
+mirrors in the projection optics. Finally, 
+the light hits the wafer at an angle of 6\%.
+
+% Photomask ?
+\section{EUVL Photomasks}
+EUVL masks are reflective, not transmissive, which is 
+achieved by using multiple alternating layers of 
+molybdenum and silicon. They consist of a patterned absorber of EUV radiation placed
+on top of an ML reflector deposited on a robust and solid
+substrate, such as a silicon wafer. Membrane masks are
+not required. The reflectance spectrum of the mask must
+be matched to that of the ML-coated mirrors in the
+camera. It is anticipated that EUVL masks will be
+fabricated using processing techniques that are standard
+in semiconductor production. Because a 4:1 reduction is
+used in the imaging, the size and placement accuracy of
+the features on the mask are achieved relatively easily.
+
+This is in contrast to conventional photomasks 
+which work by blocking light using a single 
+chromium layer on a quartz substrate. An EUV mask 
+consists of 40 alternating silicon and molybdenum 
+layers; this multilayer acts to reflect the extreme 
+ultraviolet light through Bragg diffraction; 
+the reflectance is a strong function of incident 
+angle and wavelength, with longer wavelengths 
+reflecting more near normal incidence and shorter 
+wavelengths reflecting more away from normal incidence. 
+The pattern is defined in a tantalum-based 
+absorbing layer over the multilayer.
+ The multilayer 
+may be protected by a thin ruthenium layer.
+
+
+Current EUVL systems contain at least two 
+condenser multilayer mirrors, six projection multilayer 
+mirrors and a multilayer object (mask). Since 
+the mirrors absorb 96\% of the EUV light, the ideal 
+EUV source needs to be much brighter than its 
+predecessors. EUV source development has focused on 
+plasmas generated by laser or discharge pulses. 
+The mirror responsible for collecting the light is 
+directly exposed to the plasma and is vulnerable 
+to damage from high-energy ions and other 
+debris[19] such as tin droplets, which require 
+the costly collector mirror to be replaced every year.
+
+Very precise  extremely flat micro-mirrors to 
+focus the light onto the silicon wafer to 
+produce even finer feature widths.
+
+
+
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[scale=0.5]{molec commun.jpg}
+% \caption{Examples of Molecular Communication} {Ref- [2]}
+% \label{commun}
+% \end{figure}
+
+
+\section{EUVL Photoresists}
+
+Photoresists are a critical part of lithography. Resists are 
+light-sensitive materials. 
+They form patterns on a surface when exposed to light. For EUV, 
+they are critical.
+The basic requirements for EUVL resist are sensitivity, 
+resolution, Line Width Roughness 
+(LWR) or Line Edge Roughness (LER), outgassing, a pattern 
+cross-sectional aspect ratio 
+and profile, etch resistance, defect density, and 
+reproducibility. Among them, 
+it is a critical challenge to meet the requirements 
+simultaneously on resolution, 
+LWR, and sensitivity (RLS). EUVL uses Chemically Amplified 
+Resist (CAR) due to 
+the advantages of high sensitivity and resolution, but its 
+LWR is relatively high, 
+which becomes a significant issue. For the 22 nm feature, 
+LWR should be 
+controlled below 2 nm, which is about half of the current 
+best available values
+\section{Multilayer Reflectors}
+
+In order to achieve reasonable reflectivities, the reflecting
+surfaces in EUVL imaging systems are coated with
+multilayer thin films (ML’s). These coatings consist of a
+large number of alternating layers of materials having
+dissimilar EUV optical constants, and they provide a
+resonant reflectivity when the period of the layers is
+approximately $\lambda/2$. Without such reflectors, EUVL
+would not be possible. On the other hand, the resonant
+behavior of ML’s complicates the design, analysis, and
+fabrication of EUV cameras. The most developed and
+best understood EUV multilayers are made of alternating
+layers of Mo and Si, and they function best for
+wavelengths of about 13 nm. Figure 3 shows the
+reflectivity and phase change upon reflection for an
+Mo:Si ML that has been optimized for peak reflectivity at
+13.4 nm at normal incidence; similar resonance behavior
+is seen as a function of angle of incidence for a fixed
+wavelength. While the curve shown is theoretical, peak
+reflectivites of 68\% can now be routinely attained for
+Mo:Si ML’s deposited by magnetron sputtering
+
+\chapter{ADVANATGES}
+
+
+\begin{itemize}
+  \item \textbf{High performance processors and memory: }The smaller 
+  lithography means that you can pack more transistors into the 
+  same amount of space. The more transistors you can pack into 
+  the same space means you can make a more powerful processor. 
+  That smaller lithography also means you can pack more 
+  cores into the same space as well
+
+  \item \textbf{Reduces the Number of masks: }EUVL enables the use 
+  of only one mask exposure instead of multiexposure, EUV will 
+  enable a number of critical layers to be printed in single 
+  pattern, thus reducing both the number of process steps and 
+  the critical masks.
+  \item \textbf{Better performance and scalability: }Laser-produced 
+  plasma sources have been shown to be the leading technology with 
+  scalability to meet the requirements of ASML scanners and 
+  provide a path toward higher power needed by lithography tools 
+  as they evolve over their life cycle
+  
+  \item \textbf{Better pattern fidelity which allows higher flexibility : }Since extreme-ultraviolet lithography (EUVL) uses a much shorter wavelength than optical lithography, it should provide better pattern fidelity
+
+\end{itemize}
+
+
+
+
+ 
+
+
+
+
+
+
+\chapter{CHALLENGES}
+
+EUV resists are based on two technologies — chemically amplified 
+resists (CARs) and metal oxide. EUV resists work at the current 
+nodes, but there is room for improvement.
+The current baseline in 0.33 NA EUV exposure is organic CARs. 
+Organic resists suffer from resist blur, which limits the 
+resolution of images provided by the scanner
+
+
+Because light radiation is strongly
+absorbed at this wavelength, the entire EUVL scanner system must be in a vacuum
+environment, and all optics must be reflective, not refractive. Based on the HVM
+requirements of 100-wafer/h throughput and other system requirements for optics,
+resist sensitivity, and overhead, a power requirement of 115 W has been
+specified for HVM EUVL scanners. Besides power, EUV sources must meet additional specifications
+
+A pellicle is a thin, transparent membrane that covers a 
+photomask during the production flow. The pellicle is a dust 
+cover, as it prevents particles and contaminates from falling 
+on the mask. It also must be transparent enough to allow light 
+to transmit from the lithography scanner to the mask.
+EUV pellicles are required to put EUV lithography into mass 
+production, at least for logic chips. If a particle lands on 
+an EUV mask, the scanner would likely print an unwanted defect 
+on a wafer.
+the pellicle will dissipate the heat. But at those temperatures, 
+there are also fears that the EUV pellicle could deteriorate 
+during processing, causing damage to the EUV mask and scanner.
+
+
+
+Line-edge
+roughness (LER) is one of critical issues that significantly 
+affect critical dimension (CD) and device
+performance because LER does not scale along with feature size.
+
+\chapter{CONCLUSION}
+EUVL would enable projection photolithography to remain the 
+semiconductor industry’s patterning technology of choice 
+for years to come. The EUV scanner is the most technically 
+advanced tool of any kind, that's ever been made. 
+It's so far from
+normal human experience from my understanding
+There's an insatiable amount of data, so you can build chips to store data, move data around. the whole cloud is lots
+and lots of doing all three of those things. 
+there's a lots of processing power needed in the field of science and research field area, like as in case 
+of  particle accelerators and they're going to accelerate 
+trillions of events every second. And there's no way to make 
+sense of all of that even with this generation of computers. so you have to go build ever faster computers
+, large data storage, just to make sense of the science that's going on. part of predicting the future is around
+diagnosing trends in technology.
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{ref1}R. H. Stulen and D. W. Sweeney, "SEMINARTOPIC," in IEEE Journal of Quantum Electronics, 
+      vol. 35, no. 5, pp. 694-699, doi: 10.1109/3.760315.
+
+\bibitem{ref2}P. Tao et al., "Photoresist for SEMINARTOPIC,"  (IWAPS), 2020, pp. 1-4, 
+     doi: 10.1109/IWAPS51164.2020.9286794.
+
+\bibitem{ref3}H. Komori et al., "Laser produced plasma light source for HVM-EUVL," 2007 Digest of papers 
+     Microprocesses and Nanotechnology, pp. 30-31, doi: 10.1109/IMNC.2007.4456089.
+
+\bibitem{ref4}EUV lithography finally ready for chip manufacturing. IEEE Spectrum. January 05, 2018
+
+\bibitem{ref5}ASML https://www.asml.com/en/products/euv-lithography-systems      
+
+\bibitem{ref6}Mojarad, N., Gobrecht, J. \& Ekinci, Y. Beyond EUV lithography: a comparative study of efficient photoresists' performance. Sci Rep 5, 9235
+
+\bibitem{ref7}Fan, D., Wang, L. \& Ekinci, Y. Nanolithography using Bessel Beams of Extreme Ultraviolet Wavelength. Sci Rep 6,31301 (2016).
+
+\bibitem{ref8}Samsung 5 nm and 4 nm Update: https://fuse.wikichip.org/news/2823/samsung-5-nm-and-4-nm-update/
+
+
+\end{thebibliography}
+\end{document}

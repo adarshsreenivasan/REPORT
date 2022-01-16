@@ -1,7 +1,7 @@
 PWD c:\Users\user\Desktop\COLLEGE\seminarReport\REPORT-ADARSH\REPORT
 INPUT C:\Users\user\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\user\Desktop\COLLEGE\seminarReport\REPORT-ADARSH\REPORT\Main.tex
-OUTPUT Main.log
+INPUT c:\Users\user\Desktop\COLLEGE\seminarReport\REPORT-ADARSH\REPORT\Main - Copy.tex
+OUTPUT Main - Copy.log
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -195,26 +195,6 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\blindtext\blindtext.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\blindtext\blindtext.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\blindtext\blindtext.sty
@@ -293,10 +273,10 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.st
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
-INPUT .\Main.aux
-INPUT Main.aux
-INPUT Main.aux
-OUTPUT Main.aux
+INPUT .\Main - Copy.aux
+INPUT Main - Copy.aux
+INPUT Main - Copy.aux
+OUTPUT Main - Copy.aux
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -323,7 +303,7 @@ INPUT .\frontpages\\ceklogo.jpg
 INPUT .\frontpages\\ceklogo.jpg
 INPUT frontpages\\ceklogo.jpg
 INPUT .\frontpages\\ceklogo.jpg
-OUTPUT Main.pdf
+OUTPUT Main - Copy.pdf
 INPUT .\frontpages\\ceklogo.jpg
 INPUT .\frontpages\\ceklogo.jpg
 INPUT .\frontpages\\ceklogo.jpg
@@ -346,8 +326,15 @@ INPUT .\frontpages\\ceklogo.jpg
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT Main.toc
-OUTPUT Main.lof
+INPUT .\Main - Copy.toc
+INPUT Main - Copy.toc
+INPUT Main - Copy.toc
+OUTPUT Main - Copy.toc
+INPUT .\Main - Copy.lof
+INPUT Main - Copy.lof
+INPUT Main - Copy.lof
+OUTPUT Main - Copy.lof
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
 INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
 INPUT frontpages\\Moore's_Law_Transistor_Count.png
@@ -355,17 +342,30 @@ INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
 INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
 INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
 INPUT .\frontpages\\Moore's_Law_Transistor_Count.png
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT Main.aux
+INPUT .\frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl.png
+INPUT frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT frontpages\\whyeuvl2.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT .\frontpages\\whyeuvl2.png
+INPUT Main - Copy.aux
 INPUT C:\Users\user\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\user\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
